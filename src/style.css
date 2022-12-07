@@ -82,11 +82,12 @@ a.icon:hover {
 }
 
 span.tag {
-  background-color: #000;
+  background-color: rgb(83, 83, 83);
   color: #fff;
   padding: 0.3em;
   border-radius: 0.5em;
   margin-right: 0.5em;
+  font-size: 0.9em;
 }
 
 /* Margin helpers */
