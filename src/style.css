@@ -43,22 +43,22 @@
 }
 @media (min-width: 1024px) {
   #content {
-    width: 70%;
+    width: 50%;
   }
 }
 @media (min-width: 1200px) {
   #content {
-    width: 60%;
+    width: 40%;
   }
 }
 @media (min-width: 1400px) {
   #content {
-    width: 50%;
+    width: 40%;
   }
 }
 @media (min-width: 1600px) {
   #content {
-    width: 40%;
+    width: 33%;
   }
 }
 
