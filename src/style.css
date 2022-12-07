@@ -70,3 +70,13 @@ a.heading:hover {
   color: #000;
   text-decoration: underline;
 }
+
+a.icon {
+  color: #000;
+  text-decoration: none;
+}
+
+a.icon:hover {
+  color: #000;
+  border-bottom: 1px solid #000;
+}

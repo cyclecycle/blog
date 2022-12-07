@@ -1,5 +1,7 @@
 ---
 name: test
+date: 2020-01-01
+tags: [test]
 ---
 
 # Lorem ipsum dolor

@@ -1,5 +1,7 @@
 ---
 name: test-2
+date: 2020-05-01
+tags: [test]
 ---
 
 # Lectus proin nibh
