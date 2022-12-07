@@ -2,10 +2,9 @@ import { Route, Router } from "./router";
 import showdown from "showdown";
 import * as yaml from "yaml";
 import postPreviewHtml from "./post-preview.html?raw";
-import testPost from "../posts/test.md?raw";
-import testPost2 from "../posts/test-2.md?raw";
+import { postsList } from "./posts";
 
-interface Post {
+export interface Post {
   name: string;
   md: string;
   article: HTMLDivElement;
@@ -48,10 +47,18 @@ function renderTemplate(template: string, props: { [key: string]: string }) {
   return result;
 }
 
-const postsList = [testPost, testPost2];
+function makePreviewText(post: string): string {
+  // Stop at limit or at second heading
+  const previewLimit = 500;
+  const secondHeadingIndex = post.indexOf("##");
+  if (secondHeadingIndex > previewLimit) {
+    return post.substring(0, previewLimit) + "...";
+  }
+  return post.substring(0, secondHeadingIndex);
+}
+
 const posts: { [name: string]: Post } = {};
 const converter = new showdown.Converter();
-const previewLimit = 500;
 postsList.forEach((post) => {
   const metaData = parseFrontMatter(post);
   const url = "#/post/" + metaData["name"];
@@ -59,7 +66,7 @@ postsList.forEach((post) => {
   metaData["date"] = date.toLocaleDateString();
   post = stripFrontMatter(post);
   const previewContentMd =
-    post.substring(0, previewLimit) + "..." + `<a href="${url}">Read more</a>`;
+    makePreviewText(post) + `<a href="${url}">Read</a>`;
   const previewContentHtml = converter.makeHtml(previewContentMd);
   const tagHtml = metaData["tags"]
     .map((tag: string) => `<span class="tag">${tag}</span>`)
