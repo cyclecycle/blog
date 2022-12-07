@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unpkg.com/wingcss"/>
+    <link rel="stylesheet" href="https://unpkg.com/wingcss" />
+    <link rel="stylesheet" href="/src/style.css" />
     <title>Nick Morley's Blog</title>
   </head>
   <body>
@@ -11,10 +12,15 @@
       <div class="nav-logo">
         <img id="nav-photo" src="/me.jpeg" alt="Nick Morley" />
       </div>
+      <div
+        class="nav-logo"
+        style="margin-left: 1em; color: #000; margin-right: 1em;"
+      >
+        Nick Morley's Blog
+      </div>
       <a class="nav-item" href="/">Home</a>
     </div>
-    <div id="app">
-    </div>
+    <div id="content"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
