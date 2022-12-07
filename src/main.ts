@@ -1,6 +1,7 @@
 import { Route, Router } from "./router";
 import showdown from "showdown";
 import * as yaml from "yaml";
+import postPreviewHtml from "./post-preview.html?raw";
 import testPost from "../posts/test.md?raw";
 import testPost2 from "../posts/test-2.md?raw";
 
@@ -8,7 +9,8 @@ interface Post {
   name: string;
   md: string;
   article: HTMLDivElement;
-  preview: HTMLDivElement;
+  preview: HTMLSpanElement;
+  url: string;
 }
 
 const frontMatterRegex = /---(.|\n)*---/;
@@ -17,18 +19,17 @@ function stripFrontMatter(post: string): string {
   return post.replace(frontMatterRegex, "");
 }
 
-function parseFrontMatter(post: string): { [key: string]: string } {
+function parseFrontMatter(post: string): { [key: string]: any } {
   const frontMatter = post.match(frontMatterRegex);
   if (!frontMatter) {
     throw new Error("No front matter provided.");
   }
-  const frontMatterString = frontMatter[0];
-  const frontMatterJson = frontMatterString
+  const frontMatterString = frontMatter[0]
     .replace("---", "")
     .replace("---", "")
     .trim();
   try {
-    return yaml.parse(frontMatterJson);
+    return yaml.parse(frontMatterString);
   } catch (e) {
     throw new Error(`Invalid front matter: ${e}`);
   }
@@ -36,8 +37,15 @@ function parseFrontMatter(post: string): { [key: string]: string } {
 
 function addPreviewHeadingLink(post: Post) {
   const heading = post.preview.querySelector("h1") as HTMLHeadingElement;
-  const headingUrl = "#/post/" + post.name;
-  heading.innerHTML = `<a class="heading" href="${headingUrl}">${heading.innerHTML}</a>`;
+  heading.innerHTML = `<a class="heading" href="${post.url}">${heading.innerHTML}</a>`;
+}
+
+function renderTemplate(template: string, props: { [key: string]: string }) {
+  let result = template;
+  Object.entries(props).forEach(([key, value]) => {
+    result = result.replace(`{{${key}}}`, value);
+  });
+  return result;
 }
 
 const postsList = [testPost, testPost2];
@@ -46,11 +54,24 @@ const converter = new showdown.Converter();
 const previewLimit = 500;
 postsList.forEach((post) => {
   const metaData = parseFrontMatter(post);
+  const url = "#/post/" + metaData["name"];
+  const date = new Date(metaData["date"]);
+  metaData["date"] = date.toLocaleDateString();
   post = stripFrontMatter(post);
-  const previewMd = post.substring(0, previewLimit) + "...";
-  const previewHtml = converter.makeHtml(previewMd);
-  const preview = document.createElement("div");
-  preview.innerHTML = previewHtml;
+  const previewContentMd =
+    post.substring(0, previewLimit) + "..." + `<a href="${url}">Read more</a>`;
+  const previewContentHtml = converter.makeHtml(previewContentMd);
+  const tagHtml = metaData["tags"]
+    .map((tag: string) => `<span class="tag">${tag}</span>`)
+    .join("");
+  const preview = document.createElement("span");
+  preview.innerHTML = renderTemplate(postPreviewHtml, {
+    content: previewContentHtml,
+    title: metaData["title"],
+    postUrl: "#/post/" + metaData["name"],
+    date: metaData["date"],
+    tags: tagHtml,
+  });
   const article = document.createElement("div");
   article.innerHTML = converter.makeHtml(post);
   const name = metaData["name"];
@@ -59,6 +80,7 @@ postsList.forEach((post) => {
     md: post,
     article,
     preview,
+    url,
   };
   addPreviewHeadingLink(posts[name]);
 });
@@ -77,7 +99,9 @@ const routes = [
     const previewPostElements = Object.values(posts).map(
       (post) => post.preview
     );
-    contentContainer.append(...previewPostElements);
+    contentContainer.innerHTML = previewPostElements
+      .map((preview) => preview.outerHTML)
+      .join("<br /><hr />");
   }),
 ];
 
