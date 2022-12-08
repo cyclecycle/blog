@@ -66,7 +66,7 @@ postsList.forEach((post) => {
   metaData["date"] = date.toLocaleDateString();
   post = stripFrontMatter(post);
   const previewContentMd =
-    makePreviewText(post) + `<a href="${url}">Read</a>`;
+    makePreviewText(post) + `<a href="${url}">Read more</a>`;
   const previewContentHtml = converter.makeHtml(previewContentMd);
   const tagHtml = metaData["tags"]
     .map((tag: string) => `<span class="tag">${tag}</span>`)
