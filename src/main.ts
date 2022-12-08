@@ -10,6 +10,7 @@ export interface Post {
   article: HTMLDivElement;
   preview: HTMLSpanElement;
   url: string;
+  date: string;
 }
 
 const frontMatterRegex = /---(.|\n)*---/;
@@ -88,6 +89,7 @@ postsList.forEach((post) => {
     article,
     preview,
     url,
+    date: metaData["date"],
   };
   addPreviewHeadingLink(posts[name]);
 });
@@ -98,8 +100,11 @@ const routes = [
   new Route("/post/(.*)", (path) => {
     const postName = path.split("/")[2];
     const post = posts[postName];
-    contentContainer.innerHTML = "";
-    contentContainer.append(post.article);
+    contentContainer.innerHTML = `
+      <br />
+      ${post.date}
+      <br />
+      ${post.article.innerHTML}`;
   }),
   new Route("/", () => {
     contentContainer.innerHTML = "";
