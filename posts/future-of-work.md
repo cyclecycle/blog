@@ -26,7 +26,7 @@ The main pattern of development in technology is to systematise lower-level work
 
 In programming, higher-level programming languages make it easier to write programs by abstracting away the details of the machine. In the same way, AI will make it easier to build products by abstracting away the details of programming.
 
-## Greener pastures
+## Ride the wave
 
 The conclusion is that as technology improves, it makes lower-level work easier to do, decreasing its value. This means we must find value in increasingly higher-level work.
 
