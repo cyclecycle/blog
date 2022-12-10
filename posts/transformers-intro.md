@@ -26,4 +26,4 @@ A major benefit of this approach is that computations for the different attentio
 
 ## Conclusion
 
-Transformers can be trained to create information-rich representations that allow strong performance on a variety of tasks by using attention to represent different types relationships in an way that allows for fast computation.
+Transformers can be trained to create information-rich representations that allow strong performance on a variety of tasks by using attention to represent different types of relationships in a way that allows for fast computation.
