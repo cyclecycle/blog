@@ -27,3 +27,11 @@ A major benefit of this approach is that computations for the different attentio
 ## Conclusion
 
 Transformers can be trained to create information-rich representations that allow strong performance on a variety of tasks by using attention to represent different types of relationships in a way that allows for fast computation.
+
+## Learning resources
+
+Here are some resources I have found helpful in learning about transformers so far:
+
+- [Transformer Wikipedia article](<https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)>)
+- [https://jalammar.github.io/illustrated-transformer/](https://jalammar.github.io/illustrated-transformer/)
+- [https://peterbloem.nl/blog/transformers](https://peterbloem.nl/blog/transformers)
