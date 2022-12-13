@@ -35,6 +35,7 @@ The first release offers just the basic functionality. We have a lot of ideas fo
 - **More providers** - We want to add more providers to OpenPlayground, to help users discover and compare across a more comprehensive range of models.
 - **Better provider integration** - We want to make it easier to integrate new models and providers and keep them up to date.
 - **More presets** - OpenAI and Cohere have done a great job of providing good presets which help guide and inspire users. OpenPlayground should follow this with a great library of built-in presets.
+- **Better editor** - A rich editor that supports formatting and highlighting of generated text.
 - **Automatic preset builder** - We envisage a feature that allows you to choose between multiple model outputs. This then provides the feedback to automatically select the best settings and prompt for the task.
 - **Better comparison** - We want to make it easier to compare the outputs of different models and providers, with a better interface and more metrics.
 - **Scale up** - We want to make it easy to scale up the processing of large amounts of data, to make it possible to run LLMs on larger datasets, so that users can upload and process greater amounts of data.
