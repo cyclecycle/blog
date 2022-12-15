@@ -1,5 +1,5 @@
 import Sigma from "sigma";
-import { Coordinates, EdgeDisplayData, NodeDisplayData } from "sigma/types";
+import { EdgeDisplayData, NodeDisplayData } from "sigma/types";
 import Graph from "graphology";
 import aiProblemMapHtml from "./ai-problem-map.html?raw";
 
