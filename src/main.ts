@@ -3,7 +3,7 @@ import showdown from "showdown";
 import * as yaml from "yaml";
 import postPreviewHtml from "./post-preview.html?raw";
 import { postsList } from "./posts";
-import * as aiProblemMap from "./pages/ai-problem-map";
+// import * as aiProblemMap from "./pages/ai-problem-map";
 
 export interface Post {
   name: string;
@@ -110,9 +110,9 @@ const routes = [
       <br />
       ${post.article.innerHTML}`;
   }),
-  new Route("/ai-problem-map", () => {
-    aiProblemMap.render(contentContainer);
-  }),
+  // new Route("/ai-problem-map", () => {
+  //   aiProblemMap.render(contentContainer);
+  // }),
   new Route("/", () => {
     contentContainer.innerHTML = "";
     const previewPostElements = Object.values(posts).map(
