@@ -117,6 +117,11 @@ span.tag {
 
 ul {
   list-style-type: disc;
+  padding-left: 2em;
+}
+
+li > p {
+  display: inline
 }
 
 /* Margin helpers */

@@ -3,6 +3,7 @@ import showdown from "showdown";
 import * as yaml from "yaml";
 import postPreviewHtml from "./post-preview.html?raw";
 import { postsList } from "./posts";
+import * as aiProblemMap from "./pages/ai-problem-map";
 
 export interface Post {
   name: string;
@@ -52,6 +53,9 @@ function makePreviewText(post: string): string {
   // Stop at limit or at second heading
   const previewLimit = 500;
   const secondHeadingIndex = post.indexOf("##");
+  if (secondHeadingIndex === -1) {
+    return post.substring(0, previewLimit) + "...";
+  }
   if (secondHeadingIndex > previewLimit) {
     return post.substring(0, previewLimit) + "...";
   }
@@ -105,6 +109,9 @@ const routes = [
       ${post.date}
       <br />
       ${post.article.innerHTML}`;
+  }),
+  new Route("/ai-problem-map", () => {
+    aiProblemMap.render(contentContainer);
   }),
   new Route("/", () => {
     contentContainer.innerHTML = "";

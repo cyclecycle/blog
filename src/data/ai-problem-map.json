@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "key": "0",
+      "attributes": {
+        "x": 120.72385,
+        "y": 91.18155,
+        "size": 22.714287,
+        "label": "Adaptability",
+        "color": "#D8482D"
+      }
+    },
+    {
+      "key": "1",
+      "attributes": {
+        "x": 100,
+        "y": 100,
+        "size": 14.714287,
+        "label": "Interpretability",
+        "color": "#F7A400"
+      }
+    },
+    {
+      "key": "2",
+      "attributes": {
+        "x": 50.72385,
+        "y": 91.18155,
+        "size": 22.714287,
+        "label": "Efficiency",
+        "color": "#D8482D"
+      }
+    },
+    {
+      "key": "3",
+      "attributes": {
+        "x": 60.72385,
+        "y": 91.18155,
+        "size": 22.714287,
+        "label": "Ethics",
+        "color": "#D8482D"
+      }
+    },
+    {
+      "key": "4",
+      "attributes": {
+        "x": 70.72385,
+        "y": 91.18155,
+        "size": 22.714287,
+        "label": "Collaboration",
+        "color": "#D8482D"
+      }
+    },
+    {
+      "key": "5",
+      "attributes": {
+        "x": 90.72385,
+        "y": 91.18155,
+        "size": 22.714287,
+        "label": "Intelligence",
+        "color": "#D8482D"
+      }
+    },
+    {
+      "key": "6",
+      "attributes": {
+        "x": 130.72385,
+        "y": 91.18155,
+        "size": 22.714287,
+        "label": "Application",
+        "color": "#D8482D"
+      }
+    },
+    {
+      "key": "7",
+      "attributes": {
+        "x": 268.72385,
+        "y": 91.18155,
+        "size": 22.714287,
+        "label": "Algorithms and architectures",
+        "color": "#33CC99",
+        "node_type": "solution"
+      }
+    },
+    {
+      "key": "8",
+      "attributes": {
+        "x": 45.96386,
+        "y": 94.15332,
+        "size": 22.714287,
+        "label": "Hardware",
+        "color": "#33CC99",
+        "node_type": "solution"
+      }
+    },
+    {
+      "key": "9",
+      "attributes": {
+        "x": 533.63635,
+        "y": 94.15332,
+        "size": 22.714287,
+        "label": "User interface",
+        "color": "#33CC99",
+        "node_type": "solution"
+      }
+    },
+    {
+      "key": "10",
+      "attributes": {
+        "x": 288.2692,
+        "y": 217.1399,
+        "size": 22.714287,
+        "label": "Data and infrastructure",
+        "color": "#33CC99",
+        "node_type": "solution"
+      }
+    },
+    {
+      "key": "11",
+      "attributes": {
+        "x": 124.83547,
+        "y": 289.73016,
+        "size": 22.714287,
+        "label": "Standards and regulations",
+        "color": "#33CC99",
+        "node_type": "solution"
+      }
+    },
+    {
+      "key": "12",
+      "attributes": {
+        "x": 457.56758,
+        "y": 312.61905,
+        "size": 22.714287,
+        "label": "Education and training",
+        "color": "#33CC99",
+        "node_type": "solution"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "key": "0",
+      "source": "7",
+      "target": "2",
+      "type": "arrow",
+      "attributes": {
+        "label": "Reduces data and resource requirements"
+      }
+    },
+    {
+      "key": "1",
+      "source": "9",
+      "target": "1",
+      "type": "arrow",
+      "attributes": {
+        "label": "Enables human interaction and understanding"
+      }
+    }
+  ]
+}
