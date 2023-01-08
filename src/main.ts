@@ -3,7 +3,12 @@ import showdown from "showdown";
 import * as yaml from "yaml";
 import postPreviewHtml from "./post-preview.html?raw";
 import { postsList } from "./posts";
+import { makeTableOfContents } from "./dom";
 // import * as aiProblemMap from "./pages/ai-problem-map";
+// import aiProblemMapHtml from "./ai-problem-map.html?raw";
+import aiProblemMapData from "./data/ai-problem-map.json";
+import infExtractOpporMapData from "./data/inf-extract-oppor-map.json";
+import * as sigmaGraph from "./pages/sigma-graph";
 
 export interface Post {
   name: string;
@@ -72,10 +77,11 @@ postsList.forEach((post) => {
   post = stripFrontMatter(post);
   const previewContentMd =
     makePreviewText(post) + `<a href="${url}">Read more</a>`;
-  const previewContentHtml = converter.makeHtml(previewContentMd);
+  let previewContentHtml: string = converter.makeHtml(previewContentMd);
   const tagHtml = metaData["tags"]
     .map((tag: string) => `<span class="tag">${tag}</span>`)
     .join("");
+  previewContentHtml = previewContentHtml.replace("{{ TOC }}", "");
   const preview = document.createElement("span");
   preview.innerHTML = renderTemplate(postPreviewHtml, {
     content: previewContentHtml,
@@ -86,6 +92,12 @@ postsList.forEach((post) => {
   });
   const article = document.createElement("div");
   article.innerHTML = converter.makeHtml(post);
+  // Replace {{ TOC }} with table of contents
+  const toc = makeTableOfContents(article, ["h1"]);
+  const tocHtml = toc.innerHTML;
+  console.log(tocHtml);
+  article.innerHTML = article.innerHTML.replace("{{ TOC }}", tocHtml);
+  console.log(article);
   const name = metaData["name"];
   posts[name] = {
     name,
@@ -110,9 +122,12 @@ const routes = [
       <br />
       ${post.article.innerHTML}`;
   }),
-  // new Route("/ai-problem-map", () => {
-  //   aiProblemMap.render(contentContainer);
-  // }),
+  new Route("/ai-problem-map", () => {
+    sigmaGraph.render(contentContainer, aiProblemMapData);
+  }),
+  new Route("/inf-extract-opportunity-map", () => {
+    sigmaGraph.render(contentContainer, infExtractOpporMapData);
+  }),
   new Route("/", () => {
     contentContainer.innerHTML = "";
     const previewPostElements = Object.values(posts).map(

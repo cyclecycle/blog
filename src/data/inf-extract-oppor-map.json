@@ -1,0 +1,414 @@
+{
+    "nodes": [
+        {
+            "key": "Medical",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Medical",
+                "x": 44,
+                "y": 91,
+                "size": 10,
+                "color": [
+                    0.86,
+                    0.3712,
+                    0.33999999999999997
+                ]
+            }
+        },
+        {
+            "key": "Finance",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Finance",
+                "x": 33,
+                "y": 76,
+                "size": 10,
+                "color": [
+                    0.86,
+                    0.5661999999999999,
+                    0.33999999999999997
+                ]
+            }
+        },
+        {
+            "key": "Business",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Business",
+                "x": 8,
+                "y": 57,
+                "size": 10,
+                "color": [
+                    0.86,
+                    0.7612000000000001,
+                    0.33999999999999997
+                ]
+            }
+        },
+        {
+            "key": "Legal",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Legal",
+                "x": 56,
+                "y": 16,
+                "size": 10,
+                "color": [
+                    0.7638,
+                    0.86,
+                    0.33999999999999997
+                ]
+            }
+        },
+        {
+            "key": "Research",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Research",
+                "x": 98,
+                "y": 42,
+                "size": 10,
+                "color": [
+                    0.5688000000000001,
+                    0.86,
+                    0.33999999999999997
+                ]
+            }
+        },
+        {
+            "key": "Education",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Education",
+                "x": 50,
+                "y": 52,
+                "size": 10,
+                "color": [
+                    0.3738000000000001,
+                    0.86,
+                    0.33999999999999997
+                ]
+            }
+        },
+        {
+            "key": "Govnerment",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Govnerment",
+                "x": 33,
+                "y": 91,
+                "size": 10,
+                "color": [
+                    0.33999999999999997,
+                    0.86,
+                    0.5012000000000001
+                ]
+            }
+        },
+        {
+            "key": "Social",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Social",
+                "x": 56,
+                "y": 73,
+                "size": 10,
+                "color": [
+                    0.33999999999999997,
+                    0.86,
+                    0.6962000000000002
+                ]
+            }
+        },
+        {
+            "key": "Manufacturing",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Manufacturing",
+                "x": 60,
+                "y": 52,
+                "size": 10,
+                "color": [
+                    0.33999999999999997,
+                    0.8287999999999999,
+                    0.86
+                ]
+            }
+        },
+        {
+            "key": "Supply chain management",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Supply chain management",
+                "x": 54,
+                "y": 11,
+                "size": 10,
+                "color": [
+                    0.33999999999999997,
+                    0.6337999999999998,
+                    0.86
+                ]
+            }
+        },
+        {
+            "key": "Customer service",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Customer service",
+                "x": 67,
+                "y": 42,
+                "size": 10,
+                "color": [
+                    0.33999999999999997,
+                    0.43879999999999986,
+                    0.86
+                ]
+            }
+        },
+        {
+            "key": "Marketing",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Marketing",
+                "x": 96,
+                "y": 38,
+                "size": 10,
+                "color": [
+                    0.43619999999999975,
+                    0.33999999999999997,
+                    0.86
+                ]
+            }
+        },
+        {
+            "key": "Human resources",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Human resources",
+                "x": 72,
+                "y": 63,
+                "size": 10,
+                "color": [
+                    0.6311999999999998,
+                    0.33999999999999997,
+                    0.86
+                ]
+            }
+        },
+        {
+            "key": "Environmental monitoring",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Environmental monitoring",
+                "x": 13,
+                "y": 43,
+                "size": 10,
+                "color": [
+                    0.8261999999999998,
+                    0.33999999999999997,
+                    0.86
+                ]
+            }
+        },
+        {
+            "key": "Insurance",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Insurance",
+                "x": 42,
+                "y": 34,
+                "size": 10,
+                "color": [
+                    0.86,
+                    0.33999999999999997,
+                    0.6987999999999996
+                ]
+            }
+        },
+        {
+            "key": "Real estate",
+            "attributes": {
+                "node_type": "domain",
+                "label": "Real estate",
+                "x": 87,
+                "y": 21,
+                "size": 10,
+                "color": [
+                    0.86,
+                    0.33999999999999997,
+                    0.5037999999999996
+                ]
+            }
+        },
+        {
+            "key": "Doctor",
+            "attributes": {
+                "node_type": "role",
+                "label": "Doctor",
+                "x": 19,
+                "y": 88,
+                "size": 10
+            }
+        },
+        {
+            "key": "Healthcare administrator",
+            "attributes": {
+                "node_type": "role",
+                "label": "Healthcare administrator",
+                "x": 55,
+                "y": 53,
+                "size": 10
+            }
+        },
+        {
+            "key": "Medical billing specialist",
+            "attributes": {
+                "node_type": "role",
+                "label": "Medical billing specialist",
+                "x": 1,
+                "y": 0,
+                "size": 10
+            }
+        },
+        {
+            "key": "Medical researcher",
+            "attributes": {
+                "node_type": "role",
+                "label": "Medical researcher",
+                "x": 18,
+                "y": 50,
+                "size": 10
+            }
+        },
+        {
+            "key": "Financial analyst",
+            "attributes": {
+                "node_type": "role",
+                "label": "Financial analyst",
+                "x": 16,
+                "y": 72,
+                "size": 10
+            }
+        },
+        {
+            "key": "Financial planner",
+            "attributes": {
+                "node_type": "role",
+                "label": "Financial planner",
+                "x": 57,
+                "y": 70,
+                "size": 10
+            }
+        },
+        {
+            "key": "Risk manager",
+            "attributes": {
+                "node_type": "role",
+                "label": "Risk manager",
+                "x": 0,
+                "y": 8,
+                "size": 10
+            }
+        },
+        {
+            "key": "To view patient information in an organised and queryable way to help make informed treatment decisions faster.",
+            "attributes": {
+                "node_type": "need",
+                "label": "To view patient information in an organised and queryable way to help make informed treatment decisions faster.",
+                "x": 10,
+                "y": 6,
+                "size": 10
+            }
+        },
+        {
+            "key": "To track patient data and identify trends and patterns that can inform improvements in patient care.",
+            "attributes": {
+                "node_type": "need",
+                "label": "To track patient data and identify trends and patterns that can inform improvements in patient care.",
+                "x": 48,
+                "y": 8,
+                "size": 10
+            }
+        },
+        {
+            "key": "To accurately process and track payment for medical services.",
+            "attributes": {
+                "node_type": "need",
+                "label": "To accurately process and track payment for medical services.",
+                "x": 37,
+                "y": 43,
+                "size": 10
+            }
+        },
+        {
+            "key": "Efficiently extract data from scientific papers and clinical trial reports to inform my research.",
+            "attributes": {
+                "node_type": "need",
+                "label": "Efficiently extract data from scientific papers and clinical trial reports to inform my research.",
+                "x": 31,
+                "y": 90,
+                "size": 10
+            }
+        },
+        {
+            "key": "I want quick access to data from a broad range of financial reports and documents to inform my analysis and support my recommendations.",
+            "attributes": {
+                "node_type": "need",
+                "label": "I want quick access to data from a broad range of financial reports and documents to inform my analysis and support my recommendations.",
+                "x": 46,
+                "y": 67,
+                "size": 10
+            }
+        }
+    ],
+    "edges": [
+        {
+            "source": "Medical",
+            "target": "Doctor"
+        },
+        {
+            "source": "Medical",
+            "target": "Healthcare administrator"
+        },
+        {
+            "source": "Medical",
+            "target": "Medical billing specialist"
+        },
+        {
+            "source": "Medical",
+            "target": "Medical researcher"
+        },
+        {
+            "source": "Finance",
+            "target": "Financial analyst"
+        },
+        {
+            "source": "Finance",
+            "target": "Financial planner"
+        },
+        {
+            "source": "Finance",
+            "target": "Risk manager"
+        },
+        {
+            "source": "Doctor",
+            "target": "To view patient information in an organised and queryable way to help make informed treatment decisions faster."
+        },
+        {
+            "source": "Healthcare administrator",
+            "target": "To track patient data and identify trends and patterns that can inform improvements in patient care."
+        },
+        {
+            "source": "Medical billing specialist",
+            "target": "To accurately process and track payment for medical services."
+        },
+        {
+            "source": "Medical researcher",
+            "target": "Efficiently extract data from scientific papers and clinical trial reports to inform my research."
+        },
+        {
+            "source": "Financial analyst",
+            "target": "I want quick access to data from a broad range of financial reports and documents to inform my analysis and support my recommendations."
+        }
+    ]
+}
