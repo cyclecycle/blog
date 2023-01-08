@@ -6,9 +6,9 @@ import { postsList } from "./posts";
 import { makeTableOfContents } from "./dom";
 // import * as aiProblemMap from "./pages/ai-problem-map";
 // import aiProblemMapHtml from "./ai-problem-map.html?raw";
-import aiProblemMapData from "./data/ai-problem-map.json";
-import infExtractOpporMapData from "./data/inf-extract-oppor-map.json";
-import * as sigmaGraph from "./pages/sigma-graph";
+// import aiProblemMapData from "./data/ai-problem-map.json";
+// import infExtractOpporMapData from "./data/inf-extract-oppor-map.json";
+// import * as sigmaGraph from "./pages/sigma-graph";
 
 export interface Post {
   name: string;
@@ -122,12 +122,12 @@ const routes = [
       <br />
       ${post.article.innerHTML}`;
   }),
-  new Route("/ai-problem-map", () => {
-    sigmaGraph.render(contentContainer, aiProblemMapData);
-  }),
-  new Route("/inf-extract-opportunity-map", () => {
-    sigmaGraph.render(contentContainer, infExtractOpporMapData);
-  }),
+  // new Route("/ai-problem-map", () => {
+  //   sigmaGraph.render(contentContainer, aiProblemMapData);
+  // }),
+  // new Route("/inf-extract-opportunity-map", () => {
+  //   sigmaGraph.render(contentContainer, infExtractOpporMapData);
+  // }),
   new Route("/", () => {
     contentContainer.innerHTML = "";
     const previewPostElements = Object.values(posts).map(
