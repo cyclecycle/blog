@@ -6,8 +6,10 @@ import openPlaygroundFirstRelease from "../posts/openplayground-first-release.md
 import aiOpenChallenges from "../posts/ai-open-challenges.md?raw";
 // import aiHarvestInfExtractionOpportunities from "../posts/ai-harvest-inf-extraction.md?raw";
 import Goals2023 from "../posts/2023-goals.md?raw";
+import KnowWhenToFlow from "../posts/know-when-to-flow.md?raw";
 
 export const postsList = [
+  KnowWhenToFlow,
   Goals2023,
   // aiHarvestInfExtractionOpportunities,
   aiOpenChallenges,
