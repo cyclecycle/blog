@@ -117,11 +117,20 @@ span.tag {
 
 ul {
   list-style-type: disc;
-  padding-left: 2em;
+  margin: 0;
+  padding: 0;
+  padding-inline-start: 0;
+  margin-block-start: 0;
 }
 
 li > p {
-  display: inline
+  display: inline;
+}
+
+li {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  margin-left: 2.5em;
 }
 
 /* Margin helpers */

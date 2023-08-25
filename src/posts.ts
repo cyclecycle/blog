@@ -7,8 +7,10 @@ import aiOpenChallenges from "../posts/ai-open-challenges.md?raw";
 // import aiHarvestInfExtractionOpportunities from "../posts/ai-harvest-inf-extraction.md?raw";
 import Goals2023 from "../posts/2023-goals.md?raw";
 import KnowWhenToFlow from "../posts/know-when-to-flow.md?raw";
+import LandingPageCreation from "../posts/landing-page-creation.md?raw";
 
 export const postsList = [
+  LandingPageCreation,
   KnowWhenToFlow,
   Goals2023,
   // aiHarvestInfExtractionOpportunities,
