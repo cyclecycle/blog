@@ -8,7 +8,7 @@ tags: [Web Development, AI-Assisted, LLM, StudyRecon]
 
 At GroundedAI we just created <a href="https://studyrecon.ai" target="_blank">StudyRecon</a>, a search tool that generates reports on a given research topic.
 
-I'm documenting the flow I used to create the landing page for future reference.
+I'm documenting the flow I used here to create the landing page for future reference.
 
 - **Content and Messaging**
     - **Brain-dump**: Made a bunch of rough notes describing the product, features and benefits, vision, potential questions, etc.
