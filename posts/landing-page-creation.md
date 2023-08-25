@@ -20,7 +20,7 @@ I'm documenting the flow I used here to create the landing page for future refer
         - Use ChatGPT to help find webpages that might provide inspiration. I wrote the feelings our brand tries to convey (supported, optimistic, energised, capable of more) and prompted it to suggest similar brands/niches that might also want to convey these feelings. This helped me search and find inspiration from other productivity software sites like evernote.com. I would note what I liked and prompt ChatGPT to produce code to achieve a similar thing.
 - **Logo and Imagery Creation**
     - **Prompt examples**: Give ChatGPT some stable diffusion prompt examples such as those from [https://stablediffusion.fr/prompts](https://stablediffusion.fr/prompts) because ChatGPT doesn't currently give good stable diffusion prompts without good examples like this.
-    - **Generate prompts**: Prompt ChatGPT to come up with logo and image prompts.
+    - **Generate prompts**: Prompt ChatGPT to come up with logo and image prompts given the content and messaging output from the first step.
     - **Generate images**: Use [https://playgroundai.com/create](https://playgroundai.com/create) to generate and iterate on images.
         - Use the "remove background" or "upscale 4x" features when its time download and integrate into the site.
         - Manual doctoring of images with GIMP or Figma where necessary. E.g. to simpify the image or remove background.
