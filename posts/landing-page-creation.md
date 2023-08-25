@@ -13,7 +13,7 @@ I'm documenting the flow I used here to create the landing page for future refer
 - **Content and Messaging**
     - **Brain-dump**: Made a bunch of rough notes describing the product, features and benefits, vision, potential questions, etc.
     - **Refine notes**: Used ChatGPT to refine these notes. Prompt it to not use unnecessary adjectives/qualifiers and write in a candid, down-to-earth manner (can't stand that cheesey marketing crap).
-        - This only goes so far. Edit the output to taste.
+        - This only goes so far. Edit the output to taste. This informs the output of the following steps.
 - **Web Design Iteration**
     - **Generate code** - Use ChatGPT to generate initial HTML and CSS for the landing page. Give it descriptions of different pages and structure that I have in mind. This is an iterative process as we add new pages and sections.
     - **Inspiration Sourcing**
