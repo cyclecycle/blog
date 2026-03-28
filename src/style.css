@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 #nav-photo {
   border-radius: 50%;
   width: 100px;
@@ -8,28 +12,23 @@
 }
 
 #topnav {
-  background-color: rgb(230, 230, 230);
+  background: linear-gradient(to right, #30ae88 0%, #30ae88 100%);
   color: #fff;
   padding: 10px;
   margin-bottom: 20px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  left: 0;
 }
 
 #topnav a {
-  color: rgb(0, 0, 0);
+  color: #fff;
   text-decoration: none;
 }
 
 #topnav a:hover {
-  color: rgb(0, 0, 0);
+  color: #eee;
   text-decoration: underline;
 }
 
 #content {
-  margin-top: 120px;
   padding: 1em;
   /* Center the content */
   margin-left: auto;
@@ -66,6 +65,12 @@
   #content {
     width: 33%;
   }
+}
+
+hr {
+  margin: 2em 0;
+  border: 0;
+  border-top: 1px solid #eee;
 }
 
 h1 {

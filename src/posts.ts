@@ -8,8 +8,10 @@ import aiOpenChallenges from "../posts/ai-open-challenges.md?raw";
 import Goals2023 from "../posts/2023-goals.md?raw";
 import KnowWhenToFlow from "../posts/know-when-to-flow.md?raw";
 import LandingPageCreation from "../posts/landing-page-creation.md?raw";
+import WhatToBuildInAWorldOfAgents from "../posts/what-to-build-in-a-world-of-agents.md?raw";
 
 export const postsList = [
+  WhatToBuildInAWorldOfAgents,
   LandingPageCreation,
   KnowWhenToFlow,
   Goals2023,
